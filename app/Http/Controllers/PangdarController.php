@@ -20,8 +20,8 @@ class PangdarController extends Controller
     {
         $pangdar = PanggilanDarurat::with('user')->get();
         // $pangdar->user()->first();
-        // return view('pangdar.index', compact('pangdar'));
-        return $pangdar->toJson();
+         return view('pangdar.index', compact('pangdar'));
+//        return $pangdar->toJson();
     }
 
     /**
@@ -55,8 +55,8 @@ class PangdarController extends Controller
     {
         // $pangdar = PanggilanDarurat::find($id);
         $pangdar = PanggilanDarurat::with('user')->get();
-        // return view('pangdar.user', compact('pangdar'));
-        return $pangdar->toJson();
+         return view('pangdar.user', compact('pangdar'));
+//        return $pangdar->toJson();
     }
 
     /**

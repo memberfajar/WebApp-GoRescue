@@ -12,19 +12,25 @@
 */
 
 /*index*/
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('index');
 });
+
+/*utama*/
+
+Route::get('/', 'PangdarController@index');
 
 Route::get('index', function(){
 	return view('index');
 });
 
-/*utama*/
 
-Route::get('utama', function(){
+
+Route::get('isnan', function(){
 	return view('utama');
 });
+
+
 
 Route::get('admin', 'AdminController@index');
 Route::get('pangdar', 'PangdarController@index'); 
